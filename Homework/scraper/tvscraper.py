@@ -29,7 +29,7 @@ def extract_tvseries(dom):
     list = []
 
     # loop through all series in list and scrape content
-    for movie in dom.by_tag("div.lister-item-content"):
+    for movie in dom.by_tag('div.lister-item-content'):
         title = movie.by_tag('a')[0].content
         rating = movie.by_tag('span.value')[0].content
         genres = (movie.by_class('genre')[0].content).strip()
@@ -38,10 +38,10 @@ def extract_tvseries(dom):
         counter = 0
 
         # initiate empty string actors
-        actors = ""
+        actors = ''
 
         # loop through actors from serie and add them to string
-        for actor in movie.by_tag("p")[2].by_tag('a'):
+        for actor in movie.by_tag('p')[2].by_tag('a'):
             if counter == 0:
                 actors = actor.content
                 counter += 1
