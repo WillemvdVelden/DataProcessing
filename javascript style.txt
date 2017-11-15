@@ -1,0 +1,18 @@
+/**
+* Multiline comments en header gaan zo
+*
+*
+**/
+
+// Dit is top.
+// Consistentie is belangrijk.
+
+var langeVariabeleNaam;
+
+leidende Javascript style guide = https://github.com/airbnb/javascript
+
+debuggen
+
+console.log(1);
+console.log(typeof(1));
+
