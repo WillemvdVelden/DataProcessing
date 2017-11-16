@@ -1,0 +1,31 @@
+<!--
+	Willem van der Velden
+	Minor Programmeren Fall 2017
+	Data Processing
+	Week 3
+	barchart.html
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Barchart of average rain in the Bilt 2015</title>
+    </head>
+    <meta charset ="utf-8">
+    <style>
+		.chart rect {
+		  fill: steelblue;
+		}
+
+		.chart text {
+		  fill: white;
+		  font: 10px sans-serif;
+		  text-anchor: end;
+		}
+	</style>	
+    <body>
+    	<svg class="chart"></svg>
+    	<script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>
+    	<script src='barchart.js'></script>
+	</body>
+</html>

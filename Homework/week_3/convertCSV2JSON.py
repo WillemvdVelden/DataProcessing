@@ -16,10 +16,13 @@ data = []
 with open('dataset.csv', newline='') as f:
     reader = csv.reader(f, delimiter=';')
     for row in reader:
-        data.append(row)
+    	dictionary = {}
+    	dictionary['date'] = row[0]
+    	dictionary['rain'] = int(row[1])
+    	data.append(dictionary)
 
 # dump data from list into json file
 with open('dataset.json', 'w') as outfile:
-	json.dump(data, outfile)
+	json.dump(data, outfile, indent = 1, sort_keys = True)
 
 
