@@ -17,8 +17,8 @@ with open('dataset.csv', newline='') as f:
     reader = csv.reader(f, delimiter=';')
     for row in reader:
     	dictionary = {}
-    	dictionary['date'] = row[0]
-    	dictionary['rain'] = int(row[1])
+    	dictionary['date'] = row[0][6:]
+    	dictionary['temperature'] = int(row[1])
     	data.append(dictionary)
 
 # dump data from list into json file
