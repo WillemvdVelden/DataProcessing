@@ -1,0 +1,33 @@
+/*
+*	Willem van der Velden
+*	Minor Programmeren Fall 2017
+*	Data Processing
+*	Week 4
+*	scatterplot.css
+*/
+
+/* axis style */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/* black edge around dots */
+.dot {
+  stroke: #000;
+}
+
+/* tooltip information with gainsboro background */
+.tooltip {
+  position: absolute;
+	margin-left: 20px;
+	padding: 9px;
+	border-radius: 10px;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  background-color: gainsboro;
+  color: black;
+}

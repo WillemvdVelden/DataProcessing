@@ -1,0 +1,877 @@
+[
+ {
+  "co2": 21.34,
+  "continent": "Europe",
+  "country": "Luxembourg",
+  "energyUse": 8.34,
+  "population": 507889
+ },
+ {
+  "co2": 22.96,
+  "continent": "Asia",
+  "country": "Brunei",
+  "energyUse": 8.31,
+  "population": 393302
+ },
+ {
+  "co2": 22.31,
+  "continent": "Asia",
+  "country": "United Arab Emirates",
+  "energyUse": 8.27,
+  "population": 8329453
+ },
+ {
+  "co2": 19.18,
+  "continent": "Asia",
+  "country": "Bahrain",
+  "energyUse": 7.75,
+  "population": 1261319
+ },
+ {
+  "co2": 14.67,
+  "continent": "North America",
+  "country": "Canada",
+  "energyUse": 7.38,
+  "population": 34126173
+ },
+ {
+  "co2": 20.56,
+  "continent": "Asia",
+  "country": "Oman",
+  "energyUse": 7.19,
+  "population": 2943747
+ },
+ {
+  "co2": 17.5,
+  "continent": "North America",
+  "country": "United States",
+  "energyUse": 7.16,
+  "population": 309876170
+ },
+ {
+  "co2": 11.53,
+  "continent": "Europe",
+  "country": "Finland",
+  "energyUse": 6.79,
+  "population": 5367693
+ },
+ {
+  "co2": 11.71,
+  "continent": "Europe",
+  "country": "Norway",
+  "energyUse": 6.64,
+  "population": 4891251
+ },
+ {
+  "co2": 2.66,
+  "continent": "Asia",
+  "country": "Singapore",
+  "energyUse": 6.46,
+  "population": 5078961
+ },
+ {
+  "co2": 16.92,
+  "continent": "Asia",
+  "country": "Saudi Arabia",
+  "energyUse": 6.17,
+  "population": 28090647
+ },
+ {
+  "co2": 16.75,
+  "continent": "Oceania",
+  "country": "Australia",
+  "energyUse": 5.59,
+  "population": 22162863
+ },
+ {
+  "co2": 10.17,
+  "continent": "Europe",
+  "country": "Belgium",
+  "energyUse": 5.59,
+  "population": 10929978
+ },
+ {
+  "co2": 5.6,
+  "continent": "Europe",
+  "country": "Sweden",
+  "energyUse": 5.47,
+  "population": 9382297
+ },
+ {
+  "co2": 10.96,
+  "continent": "Europe",
+  "country": "Netherlands",
+  "energyUse": 5.02,
+  "population": 16631571
+ },
+ {
+  "co2": 12.18,
+  "continent": "Europe",
+  "country": "Russia",
+  "energyUse": 4.94,
+  "population": 143158099
+ },
+ {
+  "co2": 15.52,
+  "continent": "Asia",
+  "country": "Kazakhstan",
+  "energyUse": 4.6,
+  "population": 16310624
+ },
+ {
+  "co2": 10.52,
+  "continent": "Asia",
+  "country": "Turkmenistan",
+  "energyUse": 4.23,
+  "population": 5041995
+ },
+ {
+  "co2": 7.22,
+  "continent": "Oceania",
+  "country": "New Zealand",
+  "energyUse": 4.17,
+  "population": 4369027
+ },
+ {
+  "co2": 13.67,
+  "continent": "Europe",
+  "country": "Estonia",
+  "energyUse": 4.15,
+  "population": 1332089
+ },
+ {
+  "co2": 7.97,
+  "continent": "Europe",
+  "country": "Austria",
+  "energyUse": 4.03,
+  "population": 8391986
+ },
+ {
+  "co2": 5.75,
+  "continent": "Europe",
+  "country": "France",
+  "energyUse": 4.03,
+  "population": 62961136
+ },
+ {
+  "co2": 9.06,
+  "continent": "Europe",
+  "country": "Germany",
+  "energyUse": 4.0,
+  "population": 80435307
+ },
+ {
+  "co2": 9.25,
+  "continent": "Asia",
+  "country": "Japan",
+  "energyUse": 3.9,
+  "population": 127319802
+ },
+ {
+  "co2": 7.55,
+  "continent": "Europe",
+  "country": "Slovenia",
+  "energyUse": 3.52,
+  "population": 2052480
+ },
+ {
+  "co2": 8.34,
+  "continent": "Europe",
+  "country": "Denmark",
+  "energyUse": 3.47,
+  "population": 5550959
+ },
+ {
+  "co2": 5.06,
+  "continent": "Europe",
+  "country": "Switzerland",
+  "energyUse": 3.35,
+  "population": 7830534
+ },
+ {
+  "co2": 6.61,
+  "continent": "Europe",
+  "country": "Slovak Republic",
+  "energyUse": 3.28,
+  "population": 5406896
+ },
+ {
+  "co2": 7.95,
+  "continent": "Europe",
+  "country": "United Kingdom",
+  "energyUse": 3.25,
+  "population": 62716684
+ },
+ {
+  "co2": 8.95,
+  "continent": "Europe",
+  "country": "Ireland",
+  "energyUse": 3.22,
+  "population": 4617334
+ },
+ {
+  "co2": 9.29,
+  "continent": "Africa",
+  "country": "Libya",
+  "energyUse": 3.01,
+  "population": 6265697
+ },
+ {
+  "co2": 9.52,
+  "continent": "Asia",
+  "country": "Israel",
+  "energyUse": 3.01,
+  "population": 7420368
+ },
+ {
+  "co2": 6.48,
+  "continent": "Europe",
+  "country": "Belarus",
+  "energyUse": 2.92,
+  "population": 9492122
+ },
+ {
+  "co2": 6.71,
+  "continent": "Europe",
+  "country": "Ukraine",
+  "energyUse": 2.84,
+  "population": 45647497
+ },
+ {
+  "co2": 7.73,
+  "continent": "Asia",
+  "country": "Iran",
+  "energyUse": 2.82,
+  "population": 74253373
+ },
+ {
+  "co2": 6.71,
+  "continent": "Europe",
+  "country": "Italy",
+  "energyUse": 2.81,
+  "population": 59588007
+ },
+ {
+  "co2": 5.85,
+  "continent": "Europe",
+  "country": "Spain",
+  "energyUse": 2.77,
+  "population": 46601492
+ },
+ {
+  "co2": 9.18,
+  "continent": "Africa",
+  "country": "South Africa",
+  "energyUse": 2.74,
+  "population": 51621594
+ },
+ {
+  "co2": 6.96,
+  "continent": "South America",
+  "country": "Venezuela",
+  "energyUse": 2.67,
+  "population": 28995745
+ },
+ {
+  "co2": 8.29,
+  "continent": "Europe",
+  "country": "Poland",
+  "energyUse": 2.66,
+  "population": 38574682
+ },
+ {
+  "co2": 5.07,
+  "continent": "Europe",
+  "country": "Hungary",
+  "energyUse": 2.57,
+  "population": 10014633
+ },
+ {
+  "co2": 7.63,
+  "continent": "Asia",
+  "country": "Malaysia",
+  "energyUse": 2.56,
+  "population": 28119500
+ },
+ {
+  "co2": 7.63,
+  "continent": "Europe",
+  "country": "Greece",
+  "energyUse": 2.44,
+  "population": 11177509
+ },
+ {
+  "co2": 5.96,
+  "continent": "Europe",
+  "country": "Bulgaria",
+  "energyUse": 2.37,
+  "population": 7407297
+ },
+ {
+  "co2": 6.98,
+  "continent": "Europe",
+  "country": "Cyprus",
+  "energyUse": 2.22,
+  "population": 1103685
+ },
+ {
+  "co2": 4.9,
+  "continent": "Europe",
+  "country": "Portugal",
+  "energyUse": 2.21,
+  "population": 10584837
+ },
+ {
+  "co2": 4.66,
+  "continent": "Europe",
+  "country": "Serbia",
+  "energyUse": 2.14,
+  "population": 9059046
+ },
+ {
+  "co2": 4.08,
+  "continent": "Europe",
+  "country": "Lithuania",
+  "energyUse": 2.11,
+  "population": 3122835
+ },
+ {
+  "co2": 6.22,
+  "continent": "Europe",
+  "country": "Malta",
+  "energyUse": 2.01,
+  "population": 412064
+ },
+ {
+  "co2": 3.38,
+  "continent": "Europe",
+  "country": "Latvia",
+  "energyUse": 1.97,
+  "population": 2090519
+ },
+ {
+  "co2": 5.14,
+  "continent": "Asia",
+  "country": "Hong Kong. China",
+  "energyUse": 1.95,
+  "population": 6993570
+ },
+ {
+  "co2": 4.74,
+  "continent": "Europe",
+  "country": "Croatia",
+  "energyUse": 1.93,
+  "population": 4316425
+ },
+ {
+  "co2": 4.47,
+  "continent": "South America",
+  "country": "Argentina",
+  "energyUse": 1.85,
+  "population": 41222875
+ },
+ {
+  "co2": 6.18,
+  "continent": "Asia",
+  "country": "China",
+  "energyUse": 1.81,
+  "population": 1340968737
+ },
+ {
+  "co2": 4.22,
+  "continent": "South America",
+  "country": "Chile",
+  "energyUse": 1.81,
+  "population": 17015048
+ },
+ {
+  "co2": 8.28,
+  "continent": "Europe",
+  "country": "Bosnia and Herzegovina",
+  "energyUse": 1.7,
+  "population": 3835258
+ },
+ {
+  "co2": 4.27,
+  "continent": "Asia",
+  "country": "Thailand",
+  "energyUse": 1.7,
+  "population": 66692024
+ },
+ {
+  "co2": 3.66,
+  "continent": "Europe",
+  "country": "Romania",
+  "energyUse": 1.63,
+  "population": 20298838
+ },
+ {
+  "co2": 3.91,
+  "continent": "North America",
+  "country": "Mexico",
+  "energyUse": 1.57,
+  "population": 118617542
+ },
+ {
+  "co2": 3.81,
+  "continent": "Asia",
+  "country": "Uzbekistan",
+  "energyUse": 1.53,
+  "population": 27739764
+ },
+ {
+  "co2": 4.83,
+  "continent": "Asia",
+  "country": "Lebanon",
+  "energyUse": 1.53,
+  "population": 4337156
+ },
+ {
+  "co2": 4.1,
+  "continent": "Asia",
+  "country": "Turkey",
+  "energyUse": 1.45,
+  "population": 72310416
+ },
+ {
+  "co2": 1.71,
+  "continent": "Africa",
+  "country": "Gabon",
+  "energyUse": 1.42,
+  "population": 1541936
+ },
+ {
+  "co2": 5.28,
+  "continent": "Europe",
+  "country": "Macedonia. FYR",
+  "energyUse": 1.4,
+  "population": 2062443
+ },
+ {
+  "co2": 2.15,
+  "continent": "South America",
+  "country": "Brazil",
+  "energyUse": 1.36,
+  "population": 198614208
+ },
+ {
+  "co2": 4.98,
+  "continent": "Europe",
+  "country": "Azerbaijan",
+  "energyUse": 1.31,
+  "population": 9099893
+ },
+ {
+  "co2": 4.09,
+  "continent": "Europe",
+  "country": "Montenegro",
+  "energyUse": 1.3,
+  "population": 621952
+ },
+ {
+  "co2": 1.97,
+  "continent": "South America",
+  "country": "Uruguay",
+  "energyUse": 1.24,
+  "population": 3374414
+ },
+ {
+  "co2": 3.36,
+  "continent": "Asia",
+  "country": "Jordan",
+  "energyUse": 1.19,
+  "population": 6517912
+ },
+ {
+  "co2": 4.18,
+  "continent": "Asia",
+  "country": "Mongolia",
+  "energyUse": 1.19,
+  "population": 2712657
+ },
+ {
+  "co2": 3.62,
+  "continent": "Asia",
+  "country": "Iraq",
+  "energyUse": 1.18,
+  "population": 30868156
+ },
+ {
+  "co2": 3.48,
+  "continent": "Africa",
+  "country": "Algeria",
+  "energyUse": 1.14,
+  "population": 36036159
+ },
+ {
+  "co2": 2.61,
+  "continent": "North America",
+  "country": "Jamaica",
+  "energyUse": 1.13,
+  "population": 2741253
+ },
+ {
+  "co2": 2.61,
+  "continent": "Africa",
+  "country": "Botswana",
+  "energyUse": 1.13,
+  "population": 2047831
+ },
+ {
+  "co2": 2.74,
+  "continent": "North America",
+  "country": "Panama",
+  "energyUse": 1.07,
+  "population": 3620506
+ },
+ {
+  "co2": 3.03,
+  "continent": "Asia",
+  "country": "Syria",
+  "energyUse": 1.06,
+  "population": 20720602
+ },
+ {
+  "co2": 1.67,
+  "continent": "North America",
+  "country": "Costa Rica",
+  "energyUse": 1.0,
+  "population": 4545273
+ },
+ {
+  "co2": 3.41,
+  "continent": "North America",
+  "country": "Cuba",
+  "energyUse": 0.98,
+  "population": 11308133
+ },
+ {
+  "co2": 2.47,
+  "continent": "Africa",
+  "country": "Tunisia",
+  "energyUse": 0.91,
+  "population": 10639194
+ },
+ {
+  "co2": 2.52,
+  "continent": "Africa",
+  "country": "Egypt",
+  "energyUse": 0.9,
+  "population": 82040994
+ },
+ {
+  "co2": 1.81,
+  "continent": "Asia",
+  "country": "Indonesia",
+  "energyUse": 0.87,
+  "population": 241613126
+ },
+ {
+  "co2": 2.26,
+  "continent": "South America",
+  "country": "Ecuador",
+  "energyUse": 0.84,
+  "population": 14934692
+ },
+ {
+  "co2": 1.36,
+  "continent": "Europe",
+  "country": "Armenia",
+  "energyUse": 0.79,
+  "population": 2963496
+ },
+ {
+  "co2": 0.75,
+  "continent": "Africa",
+  "country": "Zimbabwe",
+  "energyUse": 0.76,
+  "population": 13973897
+ },
+ {
+  "co2": 0.79,
+  "continent": "South America",
+  "country": "Paraguay",
+  "energyUse": 0.74,
+  "population": 6209877
+ },
+ {
+  "co2": 1.56,
+  "continent": "South America",
+  "country": "Bolivia",
+  "energyUse": 0.74,
+  "population": 9918245
+ },
+ {
+  "co2": 1.36,
+  "continent": "Europe",
+  "country": "Moldova",
+  "energyUse": 0.73,
+  "population": 4084483
+ },
+ {
+  "co2": 1.59,
+  "continent": "Africa",
+  "country": "Angola",
+  "energyUse": 0.72,
+  "population": 21219954
+ },
+ {
+  "co2": 0.5,
+  "continent": "Africa",
+  "country": "Nigeria",
+  "energyUse": 0.71,
+  "population": 159424742
+ },
+ {
+  "co2": 0.77,
+  "continent": "North America",
+  "country": "Guatemala",
+  "energyUse": 0.71,
+  "population": 14732261
+ },
+ {
+  "co2": 1.39,
+  "continent": "Africa",
+  "country": "Namibia",
+  "energyUse": 0.7,
+  "population": 2193643
+ },
+ {
+  "co2": 1.43,
+  "continent": "Europe",
+  "country": "Georgia",
+  "energyUse": 0.7,
+  "population": 4250132
+ },
+ {
+  "co2": 1.63,
+  "continent": "South America",
+  "country": "Colombia",
+  "energyUse": 0.7,
+  "population": 45918101
+ },
+ {
+  "co2": 1.71,
+  "continent": "Asia",
+  "country": "Vietnam",
+  "energyUse": 0.68,
+  "population": 88357775
+ },
+ {
+  "co2": 1.01,
+  "continent": "North America",
+  "country": "El Salvador",
+  "energyUse": 0.68,
+  "population": 6038306
+ },
+ {
+  "co2": 1.98,
+  "continent": "South America",
+  "country": "Peru",
+  "energyUse": 0.67,
+  "population": 29373644
+ },
+ {
+  "co2": 1.34,
+  "continent": "Europe",
+  "country": "Albania",
+  "energyUse": 0.65,
+  "population": 2901883
+ },
+ {
+  "co2": 0.19,
+  "continent": "Africa",
+  "country": "Zambia",
+  "energyUse": 0.63,
+  "population": 13917439
+ },
+ {
+  "co2": 1.07,
+  "continent": "North America",
+  "country": "Honduras",
+  "energyUse": 0.6,
+  "population": 7503875
+ },
+ {
+  "co2": 1.64,
+  "continent": "Asia",
+  "country": "India",
+  "energyUse": 0.57,
+  "population": 1230984504
+ },
+ {
+  "co2": 0.79,
+  "continent": "North America",
+  "country": "Nicaragua",
+  "energyUse": 0.54,
+  "population": 5737722
+ },
+ {
+  "co2": 1.58,
+  "continent": "Africa",
+  "country": "Morocco",
+  "energyUse": 0.52,
+  "population": 32107739
+ },
+ {
+  "co2": 0.93,
+  "continent": "Asia",
+  "country": "Pakistan",
+  "energyUse": 0.49,
+  "population": 170043918
+ },
+ {
+  "co2": 0.29,
+  "continent": "Africa",
+  "country": "Cote d'Ivoire",
+  "energyUse": 0.48,
+  "population": 20131707
+ },
+ {
+  "co2": 0.31,
+  "continent": "Africa",
+  "country": "Kenya",
+  "energyUse": 0.48,
+  "population": 40328313
+ },
+ {
+  "co2": 0.61,
+  "continent": "Asia",
+  "country": "Sri Lanka",
+  "energyUse": 0.48,
+  "population": 20201312
+ },
+ {
+  "co2": 0.15,
+  "continent": "Africa",
+  "country": "Tanzania",
+  "energyUse": 0.45,
+  "population": 45648525
+ },
+ {
+  "co2": 0.26,
+  "continent": "Africa",
+  "country": "Togo",
+  "energyUse": 0.45,
+  "population": 6390851
+ },
+ {
+  "co2": 0.12,
+  "continent": "Africa",
+  "country": "Mozambique",
+  "energyUse": 0.44,
+  "population": 24321457
+ },
+ {
+  "co2": 0.87,
+  "continent": "Asia",
+  "country": "Philippines",
+  "energyUse": 0.43,
+  "population": 93038902
+ },
+ {
+  "co2": 0.59,
+  "continent": "Africa",
+  "country": "Benin",
+  "energyUse": 0.41,
+  "population": 9509798
+ },
+ {
+  "co2": 0.08,
+  "continent": "Africa",
+  "country": "Ethiopia",
+  "energyUse": 0.4,
+  "population": 87561814
+ },
+ {
+  "co2": 0.37,
+  "continent": "Africa",
+  "country": "Ghana",
+  "energyUse": 0.38,
+  "population": 24317734
+ },
+ {
+  "co2": 0.42,
+  "continent": "Africa",
+  "country": "Sudan",
+  "energyUse": 0.37,
+  "population": 36114885
+ },
+ {
+  "co2": 0.5,
+  "continent": "Africa",
+  "country": "Congo. Rep.",
+  "energyUse": 0.36,
+  "population": 4066078
+ },
+ {
+  "co2": 0.37,
+  "continent": "Africa",
+  "country": "Cameroon",
+  "energyUse": 0.36,
+  "population": 20590666
+ },
+ {
+  "co2": 0.05,
+  "continent": "Africa",
+  "country": "Congo. Dem. Rep.",
+  "energyUse": 0.36,
+  "population": 65938712
+ },
+ {
+  "co2": 0.3,
+  "continent": "Asia",
+  "country": "Cambodia",
+  "energyUse": 0.36,
+  "population": 14363586
+ },
+ {
+  "co2": 0.13,
+  "continent": "Asia",
+  "country": "Nepal",
+  "energyUse": 0.34,
+  "population": 26875910
+ },
+ {
+  "co2": 0.42,
+  "continent": "Asia",
+  "country": "Tajikistan",
+  "energyUse": 0.34,
+  "population": 7581696
+ },
+ {
+  "co2": 0.19,
+  "continent": "Asia",
+  "country": "Myanmar",
+  "energyUse": 0.29,
+  "population": 51733013
+ },
+ {
+  "co2": 0.57,
+  "continent": "Africa",
+  "country": "Senegal",
+  "energyUse": 0.27,
+  "population": 12956791
+ },
+ {
+  "co2": 0.21,
+  "continent": "North America",
+  "country": "Haiti",
+  "energyUse": 0.23,
+  "population": 9999617
+ },
+ {
+  "co2": 0.38,
+  "continent": "Asia",
+  "country": "Bangladesh",
+  "energyUse": 0.21,
+  "population": 151616777
+ },
+ {
+  "co2": 0.1,
+  "continent": "Africa",
+  "country": "Eritrea",
+  "energyUse": 0.14,
+  "population": 4689664
+ }
+]
