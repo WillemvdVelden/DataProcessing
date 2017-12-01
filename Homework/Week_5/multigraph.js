@@ -11,19 +11,30 @@ window.onload = function() {
         multigraphDraw();
 }
 
-// initialize scatterplot
-function multigraphDraw() {
-    // set the dimensions and margins of the graph
-    var margin = {top: 50, right: 70, bottom: 50, left: 70},
+var margin = {top: 50, right: 70, bottom: 50, left: 70},
                   width = 1200 - margin.left - margin.right,
                   height = 500 - margin.top - margin.bottom;
 
+var dataset = "datasetSchiphol.json";
+
+function Schiphol () {
+	d3.select("svg").remove();
+	dataset = "datasetSchiphol.json";
+	multigraphDraw();
+}    
+
+function HoekvanHolland () {
+	d3.select("svg").remove();
+	dataset = "datasetHoekHolland.json";
+	multigraphDraw();
+}                 
+
+// draw graph
+function multigraphDraw() {
+    
     // change date to js format
     var parseTime = d3.timeParse("%y-%m-%d");
-
     var bisectDate = d3.bisector(function(d) { return d.date; }).left;
-
-    var color = ["darkred", "lightgreen", "deepskyblue"]
 
     // set the ranges
     var xScale = d3.scaleTime().rangeRound([0, width]);
@@ -56,7 +67,7 @@ function multigraphDraw() {
               "translate(" + margin.left + "," + margin.top + ")");
     
     // Get the data
-    d3.json("datasetSchiphol.json", function(error, data) {
+    d3.json(dataset, function(error, data) {
         if (error) throw error;
 
         // format the data
@@ -67,8 +78,6 @@ function multigraphDraw() {
           d.maximum = +d.maximum / 10;
           d.average = +d.average / 10;
         });
-
-        console.log(data)
 
         // scale the range of the data
         xScale.domain(d3.extent(data, function(d) { return d.date; }));
@@ -131,6 +140,7 @@ function multigraphDraw() {
             .attr("class", "x_hover_line hover-line")   
             .attr("y2", height)
 
+        // append circles in crosshair
         var circles = focus.selectAll("circle")
             .data(["maximum", "minimum", "average"])
             .enter().append("circle")
@@ -142,6 +152,7 @@ function multigraphDraw() {
             .attr("class", "y_hover_line hover-line")
             .attr("x1", 0)
 
+        // add data to 
         focus.selectAll("text")
             .data(["maximum", "minimum", "average"])
             .enter().append("text")
@@ -159,6 +170,7 @@ function multigraphDraw() {
             .on("mouseout", function() { focus.style("display", "none"); })
             .on("mousemove", mousemove);
 
+        // when hover on graph, create crosshair
         function mousemove() {
             var x0 = xScale.invert(d3.mouse(this)[0]),
                 i = bisectDate(data, x0, 1),
@@ -185,17 +197,33 @@ function multigraphDraw() {
                 .text(function(h) { return d[h]});
         }           
 
+        // create legend
         var legend = svg.selectAll(".legend")
             .data(["maximum", "minimum", "average"])
             .enter().append("g")
             .attr("class", "legend")
             .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
-        legend.append("rect")
-            .attr("x", width - 30)
-            .attr("width", 18)
-            .attr("height", 18)
-            .attr("fill", "blue");
+        svg.append('rect')
+			.attr("x", width - 30)
+			.attr("y", 4)
+			.attr("width", 15)
+			.attr("height", 15)
+			.attr("fill", "darkred");
+	
+		svg.append('rect')
+			.attr("x", width - 30)
+			.attr("y", 23)
+			.attr("width", 15)
+			.attr("height", 15)
+			.attr("fill", "deepskyblue");
+	
+		svg.append('rect')
+			.attr("x", width - 30)
+			.attr("y", 44)
+			.attr("width", 15)
+			.attr("height", 15)
+			.attr("fill", "lightgreen");
 
         legend.append("text")
             .attr("x", width - 10)
@@ -218,7 +246,15 @@ function multigraphDraw() {
           .attr("y", 0 - (margin.top / 10))
           .attr("text-anchor", "middle")
           .style("font-size", "20px")
-          .text("Source: www.knmi.nl");    
+          .text("Source: www.knmi.nl");
+
+         // append subtitle
+        svg.append("text")
+          .attr("x", (width / 2))
+          .attr("y", 0 - (margin.top - 65))
+          .attr("text-anchor", "middle")
+          .style("font-size", "20px")
+          .text("Willem van der Velden | 10546324");          
     });
 }
 

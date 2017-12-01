@@ -1,0 +1,32 @@
+/*
+*	Willem van der Velden
+*	Minor Programmeren Fall 2017
+*	Data Processing
+*	Week 5
+*	multigraph.css
+*/
+
+.line {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  stroke: #000000;
+  stroke-width: 1px;
+}
+  
+.hover-line {
+  stroke: #669999;
+  stroke-width: 0.7px;
+}
+
+.crosshair_text {
+	background-color: #92a8d1;
+	fill: #000000;
+}
