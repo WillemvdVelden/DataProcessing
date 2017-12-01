@@ -11,18 +11,22 @@ window.onload = function() {
         multigraphDraw();
 }
 
+
 var margin = {top: 50, right: 70, bottom: 50, left: 70},
                   width = 1200 - margin.left - margin.right,
                   height = 500 - margin.top - margin.bottom;
 
+// default dataset schiphol
 var dataset = "datasetSchiphol.json";
 
+// fuction to load schiphol data
 function Schiphol () {
 	d3.select("svg").remove();
 	dataset = "datasetSchiphol.json";
 	multigraphDraw();
 }    
 
+// function to load Hoek van Holland data
 function HoekvanHolland () {
 	d3.select("svg").remove();
 	dataset = "datasetHoekHolland.json";
