@@ -1,0 +1,59 @@
+/*
+*	Willem van der Velden
+*	Minor Programmeren Fall 2017
+*	Data Processing
+*	Week 6
+*	linkedviews.css
+*/
+
+body, html {
+      width: 960px;
+      height: 100%;
+    }
+
+svg {
+  width:50%;
+  height:100%;
+  float: left;
+}
+
+circle.airbnb {
+  fill: #e00007;
+  opacity: 0.6;
+}
+
+.axis {
+  font-family: arial;
+  font-size: 0.7em;
+}
+
+text {
+  fill: black;
+  stroke: none;
+}
+  
+.label {
+  font-size: 1.5em;
+}
+  
+path {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+}
+.tick {
+  fill: none;
+  stroke: black;
+}
+
+circle {
+  opacity: 0.9;
+  stroke: none;
+  fill: red;
+}
+
+.line {
+  fill: none;
+  stroke: #e00007;
+  stroke-width: 1px;
+}
