@@ -20,8 +20,8 @@ with open('listingsCount.csv', newline='') as f:
 	for row in reader:
 		dictionary = {}
 		if counter != 0:
-			dictionary['hood'] = row[0]
-			dictionary['count'] = int(row[1])
+			# dictionary['hood'] = row[0]
+			dictionary[row[0]] = int(row[1])
 			data.append(dictionary)
 		counter += 1
 

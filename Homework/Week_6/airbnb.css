@@ -5,11 +5,10 @@
 *	Week 6
 *	linkedviews.css
 */
-
 body, html {
-      width: 960px;
-      height: 100%;
-    }
+  width: 960px;
+  height: 100%;
+}
 
 svg {
   width:50%;
@@ -18,12 +17,12 @@ svg {
 }
 
 circle.airbnb {
-  fill: #e00007;
-  opacity: 0.6;
+  fill: #FFFFFF;
+  stroke: #FF0000;
 }
 
 .axis {
-  font-family: arial;
+  font-family: futura;
   font-size: 0.7em;
 }
 
@@ -47,13 +46,12 @@ path {
 }
 
 circle {
-  opacity: 0.9;
   stroke: none;
   fill: red;
 }
 
 .line {
   fill: none;
-  stroke: #e00007;
+  stroke: #fd5c63;
   stroke-width: 1px;
 }
