@@ -19,9 +19,9 @@ function run () {
 
 	// use queue to load all files
 	var q = d3_queue.queue(3)
-	.defer(d3.json, '/data/amsterdam.geojson')
-	.defer(d3.json, '/data/listingsCount.json')
-	.defer(d3.csv, '/data/reviewCount.csv')
+	.defer(d3.json, '../data/amsterdam.geojson')
+	.defer(d3.json, '../data/listingsCount.json')
+	.defer(d3.csv, '../data/reviewCount.csv')
 	.awaitAll(draw);
 
 	// function for drawing canvas and Amsterdam map
