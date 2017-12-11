@@ -7,6 +7,7 @@
 *   airbnb.js
 *
 *   Uses D3 to visualize the airbnb data into a graph and a Amsterdam map.
+*   Idea from: http://bl.ocks.org/hopelessoptimism/b8ef4734abad1c644221
 */
 
 // run script when window is loaded
