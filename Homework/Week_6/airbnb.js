@@ -3,46 +3,47 @@
 *   Minor Programmeren Fall 2017
 *   Data Processing
 *   Week 6
-*   linkedviews.js
+*   airbnb.js
 */
+
 // run script when window is loaded
 window.onload = function() {
         run();
 }
 
+// run code after window in loaded
 function run () {
+
+	// use queue to load all files
 	var q = d3_queue.queue(3)
-	.defer(d3.json, 'amsterdam.geojson')
-	.defer(d3.json, 'listingsCount.json')
-	.defer(d3.csv, 'reviewCount.csv')
+	.defer(d3.json, '/data/amsterdam.geojson')
+	.defer(d3.json, '/data/listingsCount.json')
+	.defer(d3.csv, '/data/reviewCount.csv')
 	.awaitAll(draw);
 
+	// function for drawing canvas and Amsterdam map
 	function draw(error, data) {
-
-    // important: First argument it expects is error
     if (error) throw error;
-      
-    /*
-    D3.js setup code
-    */
 
+    // give canvas specs
     var margin = 50,
         width = 450 - margin,
         height = 500 - margin;
     
+    // format reviewCount file a javascript time format
     var format = d3.time.format("%Y-%m-%d");
 
-    // create a projection properly scaled for SF
+    // scale projection for Amsterdam map
     var projection = d3.geo.mercator()
                       .center([4.8952, 52.3702])
                       .scale(80000)
                       .translate([width / 2, height / 2]);
     
-    // create a path to draw the neighborhoods
+    // create a path to draw the neighbourhoods
     var path = d3.geo.path()
                      .projection(projection);
 
-    // create and append the map of SF neighborhoods
+    // append neighbourhood to canvas
     var map = d3.select('#map').selectAll('path')
                  .data(data[0].features)
                  .enter()
@@ -52,25 +53,25 @@ function run () {
                  .style('stroke', 'black')
                  .style('stroke-width', 1);  
 
-    // normalize neighborhood names
+    // change neighbourhood names 
     map.datum(function(d) {
-      var normalized = d.properties.neighbourhood
+      var change= d.properties.neighbourhood
                         .replace(/ /g, '_')
                         .replace(/\//g, '_');
 
-      d.properties.neighbourhood = normalized;
+      d.properties.neighbourhood = change;
       return d;
     });             
 
-    // add the neighborhood name as its class
+    // use neighbourhood name as class
     map.attr('class', function(d) {
                     return d.properties.neighbourhood;
                  });        
 
-    // find the min/max of listing per neighborhood
-    var listings_extent = d3.extent(d3.values(data[1]));
+    // get listings per neigbourhood
+    var listings = d3.extent(d3.values(data[1]));
 
-	// append a bubble to each neighborhood
+	// append bubbles to map
 	var bubbles = d3.select('#map').append("g")
 	     .attr("class", "bubble")
 	     .selectAll("circle")
@@ -79,27 +80,28 @@ function run () {
 	     .append("circle")
 	     .attr('class', 'airbnb');
 
-	// add the listing data to each neighborhood datum
+	// add listing data to bubble
 	bubbles.datum(function(d) {
 		d.count = data[1][d.properties.neighbourhood];
 		return d;
 	});
 
-	// scale each bubble with a sqrt scale
+	// scale bubbles by root
 	var radius = d3.scale.pow().exponent(0.5)
-	             .domain(listings_extent)
+	             .domain(listings)
 	             .range([3, 12]);
 
-	// transform each bubbles' attributes according to the data 
+	// give specs to bubbles
 	bubbles
 	 .attr("cx", function(d) { return path.centroid(d.geometry)[0]; })
 	 .attr("cy", function(d) { return path.centroid(d.geometry)[1]; })
 	 .attr("r", function(d) { return radius(d.count); });
 
+	// default neighbourhood 
 	var field = "De Baarsjes - Oud-West"
 
-	// maximum reviews
-    var max_y = d3.max(data[2], function(d) {
+	// get maximum reviews for graph
+    var maxY = d3.max(data[2], function(d) {
         var max = 0;
 
         d3.values(d).forEach(function(i) {
@@ -111,112 +113,115 @@ function run () {
         return max;
     });
 
-	// Create y-axis scale mapping price -> pixels
-    var measure_scale = d3.scale.linear()
+	// scale y-axis
+    var measureScale = d3.scale.linear()
         .range([height, 100])
-        .domain([0, max_y]);
+        .domain([0,maxY]);
 
-    // Create D3 axis object from measure_scale for the y-axis
-    var measure_axis = d3.svg.axis()
-        .scale(measure_scale)
+    // make y-axis
+    var measureAxis = d3.svg.axis()
+        .scale(measureScale)
         .orient("right");
 
-    // Append SVG to page corresponding to the D3 y-axis
+    // append axis to canvas
     d3.select('#chart').append('g')
-          .attr('class', 'y axis')
+          .attr('class', 'yAxis')
           .attr("transform", "translate(" + width + " , -15)")
-          .call(measure_axis);
+          .call(measureAxis);
 
     // add label to y-axis
-    d3.select(".y.axis")
+    d3.select(".yAxis")
           .append("text")
           .attr('class', 'label')
           .text("Reviews per week")
           .attr("transform", "translate(45,215) rotate(90)");    
 
-    // create a function to draw the timeseries for each neighborhood
+    // function to draw line in graph depending on neighbourhood data
     var drawChart = function(field) {
-		// remove the previous chart
+
+		// empty chart
 		d3.select('#chart').select('.x.axis').remove();
 		d3.select('#chart').select('path').remove();
 
-		// update the title
+		// update the Neighbourhood title
 		d3.select('#heading')
 			.text(field.replace(/_/g, ' '));
 
-		// update the title
+		// update the airbnb count title
 		d3.select('#amount')
 			.text("Amount of Airbnb's: " + data[1][field.replace(/ /g, '_')
                         	   							.replace(/\//g, '_')]);
 
-		// remove missing values
-		var neigh_data = data[2].filter(function(d) {
+		// filter missing data out of data
+		var neighData = data[2].filter(function(d) {
 			return d[field];
 		});
 
 		// get min/max dates
-		var time_extent = d3.extent(neigh_data, function(d){
+		var timeExtent = d3.extent(neighData, function(d){
 			return format.parse(d['timestamp']);
 		});
 
-		// Create x-axis scale mapping dates -> pixels
-		var time_scale = d3.time.scale()
+		// scale x-axis
+		var timeScale = d3.time.scale()
 			.range([0, width - margin])
-			.domain(time_extent);
+			.domain(timeExtent);
 
-		// Create D3 axis object from time_scale for the x-axis
-		var time_axis = d3.svg.axis()
-			.scale(time_scale)
+		// make x-axis
+		var timeAxis = d3.svg.axis()
+			.scale(timeScale)
 			.tickFormat(d3.time.format("%b '%y"));
 
-		// Append SVG to page corresponding to the D3 x-axis
+		// append axis to chart
 		d3.select('#chart').append('g')
 			.attr('class', 'x axis')
-			.attr('transform', "translate(" + margin + ',' + (height - 15) + ")")
-			.call(time_axis)
-			  .selectAll("text")
+			.attr('transform', "translate(" + margin + ',' + (height - 15) +
+				  ")")
+			.call(timeAxis)
+			.selectAll("text")
 			.attr("y", 0)
 			.attr("x", 9)
 			.attr("dy", ".35em")
 			.attr("transform", "rotate(90)")
 			.style("text-anchor", "start");
 
-		// define the values to map for x and y position of the line
+		// define chart line
 		var line = d3.svg.line()
-		       .x(function(d) { return time_scale(format.parse(d['timestamp'])); })
-		       .y(function(d) { return measure_scale(+d[field]); });
+		       .x(function(d) { return timeScale(format.parse(d['timestamp'])); })
+		       .y(function(d) { return measureScale(+d[field]); });
 
-		// append a SVG path that corresponds to the line chart
+		// append chart line to chart
 		d3.select('#chart').append("path")
-		.datum(neigh_data)
+		.datum(neighData)
 		.attr("class", "line")
 		.attr("d", line)
 		.attr('transform', 'translate(' + margin + ', -15)');
 	};
 
+	// draw chart
     drawChart(field);
 
-	// create a callback for the neighborhood hover
-	var mover = function(d) {
+	// make function for mouse over
+	var mouseOver = function(d) {
 		var neigh = d.properties.neighbourhood;
 		d3.select('#map path.' + neigh).style('fill', 'black');
 
 		drawChart(neigh);
 	};
 
-	// create a callback for the neighborhood hover
-	var mout = function(d) {
+	// make function for mouse out
+	var mouseOut = function(d) {
 	var neigh = d.properties.neighbourhood;
 		d3.select('path.' + neigh).style('fill', '#fd5c63');
 	}
 
-	// attach events to neighborhoods in map
-	map.on("mouseover", mover);
-	map.on("mouseout", mout);
+	// attach functions to map
+	map.on("mouseover", mouseOver);
+	map.on("mouseout", mouseOut);
 
-	// attach events to bubbles on map
-	bubbles.on('mouseover', mover);
-	bubbles.on('mouseout', mout);
+	// attach functions to bubbles in map
+	bubbles.on('mouseover', mouseOver);
+	bubbles.on('mouseout', mouseOut);
 	};
 
 }
