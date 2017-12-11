@@ -143,7 +143,7 @@ function run () {
     var drawChart = function(field) {
 
 		// empty chart
-		d3.select('#chart').select('.x.axis').remove();
+		d3.select('#chart').select('.xAxis').remove();
 		d3.select('#chart').select('path').remove();
 
 		// update the Neighbourhood title
@@ -178,7 +178,7 @@ function run () {
 
 		// append axis to chart
 		d3.select('#chart').append('g')
-			.attr('class', 'x axis')
+			.attr('class', 'xAxis')
 			.attr('transform', "translate(" + margin + ',' + (height - 15) +
 				  ")")
 			.call(timeAxis)
@@ -217,6 +217,8 @@ function run () {
 	var mouseOut = function(d) {
 	var neigh = d.properties.neighbourhood;
 		d3.select('path.' + neigh).style('fill', '#fd5c63');
+		d3.select('#chart').select('.xAxis').remove();
+		d3.select('#chart').select('path').remove();
 	}
 
 	// attach functions to map
