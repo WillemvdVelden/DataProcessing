@@ -1,14 +1,18 @@
 /*
 *	Willem van der Velden
 *	Minor Programmeren Fall 2017
+* 10546324
 *	Data Processing
 *	Week 6
-*	airbnb.css
+*	Linkedview.css
+*
+* Adds the style elements to the html files.
 */
-/* Remove the navbar's default margin-bottom and rounded borders */ 
+
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
+  color: #fd5c63;
 }
 
 .navbar-brand>img {
@@ -18,40 +22,25 @@
    margin: 0 auto;
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {height: 450px}
-
-/* Set gray background color and 100% height */
-.sidenav {
-  padding-top: 20px;
-  background-color: #FFFFFF;
-  height: 100%;
-}
-
-/* Set black background color, white text and some padding */
-footer {
-  background-color: #FFFFFF;
+.footer {
   color: white;
   padding: 15px;
-}
-
-/* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px;
-  }
-  .row.content {height:auto;} 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fd5c63;
+  background: #F8F8F8;
+  text-align: center;
 }
 
 body, html {
-  width: 960px;
   height: 100%;
 }
 
 svg {
   width:50%;
-  height:100%;
+  height:70%;
   float: left;
 }
 
@@ -85,12 +74,17 @@ path {
 }
 
 circle {
-  stroke: none;
-  fill: red;
+  stroke: blue;
+  fill: white;
 }
 
 .line {
   fill: none;
   stroke: #fd5c63;
   stroke-width: 1px;
+}
+
+.pdf {
+  height: 100%;
+  width: 100%;
 }

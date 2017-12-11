@@ -1,0 +1,57 @@
+<!--
+	Willem van der Velden
+	Minor Programmeren Fall 2017
+  10546324
+	Data Processing
+	Week 6
+	visualisation.html
+
+  Loads the js visualisations in a html page.
+-->
+
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+  <title>Amsterdam Airbnb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../libraries/d3.min.js"></script>
+  <script src="../libraries/d3-queue.v2.min.js"></script>
+  <script src="../airbnb.js"></script>
+  <script src="../libraries/bootstrap/js/bootstrap.min.js"></script>
+  <link href="../libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../airbnb.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="http://insideairbnb.com" target ="_blank"><img src="../airbnbLogo.svg" alt="Airbnb"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="visualisation.html">Visualisation</a></li>
+          <li><a href="../templates/designChoices.html">Design Choices</a></li>
+          <li><a href="../templates/storytelling.html">Storytelling</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <svg id="map">
+    <text x="50%" y="50" id="amount" font-size="1.5em" text-anchor="middle" font-family="futura">Amsterdam</text>
+    <text x="50%" y="70" font-size="1em" text-anchor="middle" font-family="futura">Circles represent amount of Airbnb's in particular Amsterdam neighbourhood</text>
+  </svg>  
+  <svg id="chart">
+    <text x="50%" y="50" id="heading" font-size="1.5em" text-anchor="end" font-family="futura">Amsterdam</text>
+  </svg>
+  <div class="footer footer-default">
+    <p> Willem van der Velden | 10546324 | Data Processing</p>
+  </div>
+</body>
+</html>

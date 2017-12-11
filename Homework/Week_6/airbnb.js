@@ -1,15 +1,18 @@
 /**
 *   Willem van der Velden
 *   Minor Programmeren Fall 2017
+*   10546324
 *   Data Processing
 *   Week 6
 *   airbnb.js
+*
+*   Uses D3 to visualize the airbnb data into a graph and a Amsterdam map.
 */
 
 // run script when window is loaded
 window.onload = function() {
         run();
-}
+};
 
 // run code after window in loaded
 function run () {
@@ -98,7 +101,7 @@ function run () {
 	 .attr("r", function(d) { return radius(d.count); });
 
 	// default neighbourhood 
-	var field = "De Baarsjes - Oud-West"
+	var field = "De Baarsjes - Oud-West";
 
 	// get maximum reviews for graph
     var maxY = d3.max(data[2], function(d) {
@@ -149,8 +152,9 @@ function run () {
 
 		// update the airbnb count title
 		d3.select('#amount')
-			.text("Amount of Airbnb's: " + data[1][field.replace(/ /g, '_')
-                        	   							.replace(/\//g, '_')]);
+			.text("Amount of Airbnb's in neighbourhood: " + 
+				   data[1][field.replace(/ /g, '_')
+                        	   	.replace(/\//g, '_')]);
 
 		// filter missing data out of data
 		var neighData = data[2].filter(function(d) {
@@ -222,6 +226,5 @@ function run () {
 	// attach functions to bubbles in map
 	bubbles.on('mouseover', mouseOver);
 	bubbles.on('mouseout', mouseOut);
-	};
-
+	}
 }
